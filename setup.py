@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="FilterReportIPsByCount.py", 
+    name="FilterReportIPsByCount-divyaaveerama", 
     version="1.0.0",
     author="Divyaa Kamalanathan",
     author_email="divyaa.kamalanathan@intrinium.com",
