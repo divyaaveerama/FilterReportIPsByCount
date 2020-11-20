@@ -73,17 +73,27 @@ def checkIfMalicious(IPsToCheck):
     return MalIPs
 
 # Print IPs to ban in a list and IP info to file
-def PrintIPInformation(maliciousIPs,filename):
-    fo = open(filename,"w+)
-    fo.write(maliciousIPs.keys())
+def PrintIPInformationIntoFile(maliciousIPs,filename):
+    fo = open(filename,"w+")
+    for keys in maliciousIPs.keys():
+        fo.write(keys)
+        fo.write("\n")
     fo.write("\n")
-    fo.write(maliciousIPs.values())
+
+    for values in maliciousIPs.values():
+       fo.write(values)
 
 # Print IPs to ban in a list and IP info to stdout, if no output file is specified
 def PrintIPInformation(maliciousIPs):
-    print(maliciousIPs.keys())
+    for keys in maliciousIPs.keys():
+        print(keys)
+        print("\n")
+
     print("\n")
-    print(maliciousIPs.values())
+
+    for values in maliciousIPs.values():
+        print(values)
+        print("\n")
 
 #Main Function    
 def main(argv):
@@ -117,10 +127,10 @@ def main(argv):
         sys.exit(2)
         
     IPs = getIPsFromExcelFile(excelFileName)
-    IPsToBan = getIPsToBan(IPs)
+    IPsToBan = getIPsToBan(IPs,count)
     MaliciousIPs = checkIfMalicious(IPsToBan)
     if outputFileName != '':
-        PrintIPInformation(MaliciousIPs,outputFileName)
+        PrintIPInformationIntoFile(MaliciousIPs,outputFileName)
     else:
         PrintIPInformation(MaliciousIPs)
     
