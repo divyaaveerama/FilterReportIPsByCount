@@ -6,10 +6,10 @@ Script to read through a report containing IP addresses that are potentially mal
     *  [Make sure that you set up Python environment variables](https://docs.python.org/3/using/windows.html#excursus-setting-environment-variables)
 2.  Download the zip file or clone the repository
 3.  In the command line, navigate to the repository and enter the below command (Only required with first use)
-    `pip install -r requirements.txt`
+    * `pip install -r requirements.txt`
 4.  Enter the below command with the following arguments
-    `FilterReportIPsByCount.py -i <input filename> -o <output filename> -c <count>`
-    **-i [input filename]** : REQUIRED, the filename (with path, if not on the same directory) of the excel file you want to analyze
-    **-o [output filename]** : Optional, the filename of the text file to which you would like to print the IP analysis information; if not specified, will output to stdout
-    **-c [count]** : Optional, number of times an IP should appear in the report to be added to the list of IPs to analyze; if not specified, will default to 5
-    **-h** : Shows the arguments and options required 
+    * `FilterReportIPsByCount.py -i <input filename> -o <output filename> -c <count>`
+    > **-i [input filename]** : REQUIRED, the filename (with path, if not on the same directory) of the excel file you want to analyze
+    > **-o [output filename]** : Optional, the filename of the text file to which you would like to print the IP analysis information; if not specified, will output to stdout
+    > **-c [count]** : Optional, number of times an IP should appear in the report to be added to the list of IPs to analyze; if not specified, will default to 5
+    > **-h** : Shows the arguments and options required 
