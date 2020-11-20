@@ -1,6 +1,8 @@
 # FilterReportIPsByCount
-# Divyaa Kamalanathan 2020
-# Script to read through a report on an excel file, grab IPs if it is greater than or equal to a set count and check if malicious
+# Divyaa Kamalanathan 2020 divyaaveerama96@gmail.com
+# Script to read through a report on an excel file, grab IPs if it is greater than or equal
+# to a set count and check if malicious
+# GNU Public License v3
 
 
 import sys
@@ -123,8 +125,8 @@ def main(argv):
             count = int(arg)
             
     if count <= 0:
-        print("Invalid count")
-        sys.exit(2)
+        print("Invalid count, using default count of 5")
+        count = 5
         
     IPs = getIPsFromExcelFile(excelFileName)
     IPsToBan = getIPsToBan(IPs,count)
