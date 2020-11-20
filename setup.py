@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="FilterReportIPsByCount-divyaaveerama", 
-    version="1.0.0",
+    version="1.0.1",
     author="Divyaa Kamalanathan",
     author_email="divyaa.kamalanathan@intrinium.com",
     description="Script to read through a report, grab IPs and check if malicious",
