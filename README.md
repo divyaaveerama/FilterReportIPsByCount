@@ -10,6 +10,9 @@ Script to read through a report containing IP addresses that are potentially mal
 4.  Enter the below command with the following arguments
     * `FilterReportIPsByCount.py -i <input filename> -o <output filename> -c <count>`
     > **-i [input filename]** : REQUIRED, the filename (with path, if not on the same directory) of the excel file you want to analyze
+    >
     > **-o [output filename]** : Optional, the filename of the text file to which you would like to print the IP analysis information; if not specified, will output to stdout
+    >
     > **-c [count]** : Optional, number of times an IP should appear in the report to be added to the list of IPs to analyze; if not specified, will default to 5
+    >
     > **-h** : Shows the arguments and options required 
