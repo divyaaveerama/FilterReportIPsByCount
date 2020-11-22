@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="FilterReportIPsByCount", 
-    version="1.0.5",
+    version="1.0.10",
     author="Divyaa Kamalanathan",
     author_email="divyaa.kamalanathan@intrinium.com",
     description="Script to read through a report, grab IPs and check if malicious, output-ing malicious IP information",
