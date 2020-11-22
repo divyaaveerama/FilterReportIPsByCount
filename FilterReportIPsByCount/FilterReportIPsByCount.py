@@ -55,7 +55,7 @@ def getIPsToBan(IPs,count):
 
 #Use IPVoid API to check if IP has been blacklisted, returns IPs and IP Information
 def checkIfMalicious(IPsToCheck):
-    apikey = config.api_key
+    apikey = config.api_key()
     MalIPs = {}
     for IP in IPsToCheck:
         response = requests.get('https://endpoint.apivoid.com/iprep/v1/pay-as-you-go/?key='+apikey+'&ip='+IP)
